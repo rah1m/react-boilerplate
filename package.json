@@ -154,8 +154,7 @@
   },
   "lint-staged": {
     "src/**/*": [
-      "npm run lint",
-      "npm run test"
+      "npm run lint"
     ]
   }
 }

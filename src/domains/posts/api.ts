@@ -8,7 +8,7 @@ export const postsApi = createApi({
   baseQuery: axiosBaseQuery(),
   tagTypes: ["POSTS"],
   endpoints: (builder) => ({
-    getPosts: builder.query<POSTS, Partial<string>>({
+    getPosts: builder.query<POSTS[], Partial<string>>({
       query: () => ({
         url: "posts",
         method: "GET",
