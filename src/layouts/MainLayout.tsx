@@ -1,3 +1,5 @@
+import LanguageSwitcher from "@components/LanguageSwitcher/LanguageSwitcher";
+import LinkWithLang from "@components/LinkWIthLang/LinkWithLang";
 import { Link, Outlet } from "react-router-dom";
 
 const MainLayout = () => {
@@ -5,12 +7,13 @@ const MainLayout = () => {
     <div>
       <ul className="list-none flex">
         <li className="p-2">
-          <Link to="/">Home</Link>
+          <LinkWithLang to="/">Home</LinkWithLang>
         </li>
         <li className="p-2">
-          <Link to="posts">Posts</Link>
+          <LinkWithLang to="posts">Posts</LinkWithLang>
         </li>
       </ul>
+      <LanguageSwitcher />
       <div className="content">
         <Outlet />
       </div>

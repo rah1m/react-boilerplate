@@ -14,6 +14,17 @@ export const postsApi = createApi({
         method: "GET",
       }),
     }),
+    sendPost: builder.mutation<POSTS, Partial<string>>({
+      query: () => ({
+        url: "posts",
+        method: "POST",
+        data: {
+          title: "foo",
+          body: "bar",
+          userId: 1,
+        },
+      }),
+    }),
   }),
 });
 
@@ -21,6 +32,7 @@ export const postsApi = createApi({
 // auto-generated based on the defined endpoints
 export const hooks = {
   useGetPosts: postsApi.useGetPostsQuery,
+  useSendPost: postsApi.useSendPostMutation,
 };
 
 export default postsApi;
